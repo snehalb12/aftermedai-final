@@ -9,10 +9,30 @@ This project showcases how LLMs and prompt engineering can drive real-world heal
 
 ##  Key Features
 
--  **Discharge Summary Upload** – Upload hospital documents in `.txt` format.
--  **Autonomous Agent Behavior** – The app reasons through the input to identify missing info and generate care instructions.
--  **Prompt-Aware Design** – Toggle between auto-generated prompts and manual prompt input.
--  **Patient-Centered Output** – Outputs easy-to-understand care plans for follow-ups, medications, and recovery.
+### Agentic AI Prompt Control
+- Automatically generates optimized prompts
+- Optional **custom prompt** entry (aligned with Prompthon theme)
+
+### Care Plan Generation
+- Creates detailed, structured Markdown-based care plans
+- Personalized, readable output with daily schedule, FAQs, recovery timeline, red flags
+
+### Real-Time Validation
+- Flags missing or ambiguous information (e.g., dosage, follow-up)
+- Helps ensure discharge summaries are clinically complete
+
+### Chat-Enabled
+- Ask follow-up questions to clarify medications or instructions
+- Powered by LLM using session-based memory
+
+### PDF Download
+- Generates downloadable care plan PDF using `xhtml2pdf`
+- No external binaries required
+
+### Session Persistence
+- Care plan and chat remain visible after actions
+- “Start Over” button clears the session and resets the app
+
 
 ---
 
@@ -30,18 +50,31 @@ This app uses an **LLM-powered agent** that:
 
 ```
 care-coders/
-├── app/
-│   └── main.py                  # Streamlit UI
-├── agents/
-│   └── extract_agent.py         # Core LLM logic and prompt generation
-├── examples/
-│   └── sample_discharge.txt     # Sample input
-├── screenshots/
-│   └── sample_output.png        # UI screenshot
-├── .env                         # Template for secrets
+├── .env                         # Environment variables (API keys)
 ├── .gitignore
+├── README.md
 ├── requirements.txt
-└── README.md
+
+├── agents/
+│   ├── extract_agent.py         # Core LLM logic and prompt generation
+│   ├── __init__.py
+│   └── __pycache__/             # Compiled Python files
+
+├── app/
+│   ├── main.py                  # Streamlit UI logic
+│   └── __init__.py
+
+├── examples/
+│   └── sample_discharge.txt     # Sample input file
+
+├── output_examples/
+│   └── CarePlan.pdf             # Example generated output
+
+├── screenshots/                 # UI Screenshots
+
+└── utils/
+    └── logo.png                 # Logo
+
 ```
 
 ---
@@ -81,23 +114,24 @@ This app is designed as a **local-first agentic AI solution**:
 
 ## Example Use Case
 
-> “A patient is discharged from a hospital with a complex summary. AfterMedAI reads the summary, flags that no follow-up date is mentioned, and generates a care plan reminding the patient to revisit their physician and continue their medications for 5 days.”
+“A patient is discharged from a hospital with a complex summary. AfterMedAI reads the summary, flags that no follow-up date is mentioned, and generates a care plan reminding the patient to revisit their physician and continue their medications for 5 days.”
 
 ---
 
 ## Built With
 
 - **OpenAI / Azure OpenAI** – LLM backbone
-- **LangChain** – Optional agent framework (modular)
 - **Streamlit** – For interactive UI
 - **dotenv** – For API key management
-
+- **xhtml2pdf** – For HTML-to-PDF generation
+- **PyPDF2** – For reading PDF summaries
+- **markdown** – For formatting care plans
 
 ---
 
 ## Authors
 
-**Team:** Care Coders - Snehal Bandekar, Samadhan Thube, Harshada Kothe, Aditya Londhe, Jaideep Jahagirdhar, Siddharth Pimprikar
+**Team:** Care Coders  
+**Members:** Snehal Bandekar, Harshada Kothe, Samadhan Thube, Aditya Londhe, Jaideep Jahagirdhar, Siddharth Pimprikar  
 **Project:** AfterMedAI  
-**Hackathon:** Agentic AI Prompthon (2025)
-
+**Hackathon:** Agentic AI Prompthon 
