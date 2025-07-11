@@ -1,0 +1,13 @@
+Patient Name: John Doe
+Age: 55
+Diagnosis: Type 2 Diabetes, Hypertension
+
+Discharge Medications:
+- Metformin 500mg twice daily
+- Lisinopril (Dosage missing)
+
+Follow-up:
+Visit endocrinology and nephrology in 4 weeks (Date not specified)
+
+Notes:
+Check blood sugar daily; report dizziness or swelling.
