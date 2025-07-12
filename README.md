@@ -1,4 +1,3 @@
-
 # AfterMedAI – Autonomous Post-Discharge Care Assistant
 
 **AfterMedAI** is a **local-first, agentic AI app** designed to simplify post-hospital care. It autonomously analyzes discharge summaries, extracts key clinical details, flags missing information, and generates structured, patient-friendly care plans.
