@@ -10,7 +10,7 @@ This project showcases how LLMs and prompt engineering can drive real-world heal
 
 ### Agentic AI Prompt Control
 - Automatically generates optimized prompts
-- Optional **custom prompt** entry (aligned with Prompthon theme)
+- Optional **custom prompt** entry 
 
 ### Care Plan Generation
 - Creates detailed, structured Markdown-based care plans
