@@ -49,30 +49,42 @@ This app uses an **LLM-powered agent** that:
 
 ```
 care-coders/
-├── .env                         # Environment variables (API keys)
+├── .env                         # API keys and environment config
 ├── .gitignore
 ├── README.md
 ├── requirements.txt
 
 ├── agents/
-│   ├── extract_agent.py         # Core LLM logic and prompt generation
+│   ├── extract_agent.py         # LLM logic, prompt builder, and chatbot
 │   ├── __init__.py
-│   └── __pycache__/             # Compiled Python files
+│   └── __pycache__/             # Compiled cache files
 
 ├── app/
-│   ├── main.py                  # Streamlit UI logic
+│   ├── main.py                  # Streamlit app frontend
 │   └── __init__.py
 
+├── documentation/
+│   └── Agentic AI workflow.png  # Agentic AI workflow explanation
+
 ├── examples/
-│   └── sample_discharge.txt     # Sample input file
+│   ├── sample_discharge_pdf.pdf
+│   └── sample_discharge_text.txt
 
 ├── output_examples/
-│   └── CarePlan.pdf             # Example generated output
+│   ├── CarePlan1.pdf
+│   └── CarePlan2.pdf
 
-├── screenshots/                 # UI Screenshots
+├── screenshots/                 # App UI screenshots
+│   ├── AfterMedAI-Homepage.png
+│   ├── Care-Plan-Generation.png
+│   ├── Custom-Prompt-Toggle.png
+│   ├── Discharge-Summary-from-input.png
+│   ├── Downloadable-pdf.png
+│   └── Session-reset.png
 
 └── utils/
-    └── logo.png                 # Logo
+    └── logo.png                 # App logo
+
 
 ```
 
