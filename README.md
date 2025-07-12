@@ -90,9 +90,9 @@ pip install -r requirements.txt
 ### Set up your `.env`
 Create a `.env` file based on `.env`:
 
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxx
+OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxx
 AZURE_OPENAI_ENDPOINT=https://your-endpoint.openai.azure.com/
-AZURE_OPENAI_DEPLOYMENT_NAME=your-deployment
+AZURE_OPENAI_DEPLOYMENT_NAME=your-deployment-name
 AZURE_OPENAI_API_VERSION=2023-12-01-preview
 
 
